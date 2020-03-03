@@ -1,26 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import "semantic-ui-css/semantic.min.css";
+import { Card } from "semantic-ui-react";
+
+import Input from "./components/input";
+import Button from "./components/button";
+
+class App extends Component {
+  constructor(){
+    super();
+
+    this.state = {
+        result: " "
+    }
+}
+  onClick = () => {
+    console.log (this.result)
+    this.calculate();
+  };
+
+  calculate = () => {
+    let checkResult = "";
+    if (this.state.result.includes("--")) {
+      checkResult = this.state.result.replace("--", "+");
+    } else {
+      checkResult = this.state.result;
+    }
+
+    try {
+      this.setState({
+        // eslint-disable-next-line
+        result: (eval(checkResult) || "") + ""
+      });
+    } catch (e) {
+      this.setState({
+        result: "error"
+      });
+    }
+  };
+
+  render() {
+    return (
+      <div>
+        <Card>
+          <Input result={this.state.result}/>
+          <Button onClick={this.state.onClick}/>
+        </Card>
+      </div>
+    );
+  }
 }
 
 export default App;
