@@ -1,16 +1,15 @@
 import React, { Component, Fragment } from "react";
 import { Input } from "semantic-ui-react";
 
-export class input extends Component {
+export class CalInput extends Component {
 
   render() {
-    let {result} = this.props.name;
     return (
       <Fragment>
-        <Input disabled>{result}</Input>
+        <Input disabled></Input>
       </Fragment>
     );
   }
 }
 
-export default input;
+export default CalInput;
