@@ -126,7 +126,7 @@ class ButtonCal extends Component {
           >
             <CalButton name="=" handleClick={this.handleClick} />
             <CalButton name="*" handleClick={this.handleClick} />
-            <CalButton name=":" handleClick={this.handleClick} />
+            <CalButton name="/" handleClick={this.handleClick} />
           </div>
           <div
             style={{
