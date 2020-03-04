@@ -1,15 +1,31 @@
-import React, { Component, Fragment } from "react";
-import { Input } from "semantic-ui-react";
+// import React, { Component, Fragment } from "react";
+// import { Input } from "semantic-ui-react";
+// import ButtonCal from "./ButtonCal"
 
-export class CalInput extends Component {
+// export class CalInput extends Component {
+//   state = {
+//     name: " "
+//   };
 
-  render() {
-    return (
-      <Fragment>
-        <Input disabled></Input>
-      </Fragment>
-    );
-  }
-}
+//   handleCounterChange = newValue => {
+//     this.setState({
+//       count: newValue
+//     });
+//   };
 
-export default CalInput;
+//   render() {
+//     return (
+//       <Fragment>
+//         <Input
+//           disabled
+//           onChange={value => this.handleCounterChange(value)}
+//         >
+//           {this.state.name}
+//         </Input>
+//         <ButtonCal/>
+//       </Fragment>
+//     );
+//   }
+// }
+
+// export default CalInput;

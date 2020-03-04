@@ -1,11 +1,17 @@
 import React from "react";
-import { Button} from "semantic-ui-react";
+import { Button } from "semantic-ui-react";
 
-
-const CalButton = (props) => {
-return (
+const CalButton = props => {
+  return (
     <div>
-      <Button onClick={(e) => props.handleClick(e, props.name)}>{props.name}</Button>
+      <Button
+        circular
+        size="huge"
+        color="blue"
+        onClick={e => props.handleClick(e, props.name)}
+      >
+        {props.name}
+      </Button>
     </div>
   );
 };
